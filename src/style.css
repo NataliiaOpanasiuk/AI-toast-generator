@@ -43,14 +43,20 @@ form {
 }
 .submit-btn:hover {
   color: #402316;
+  cursor: pointer;
 }
 .ai-answer {
+  display: none;
+}
+.shown {
+  display: block;
   background-color: white;
   border-left: 3px solid #f3a521;
   color: #402316;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
   margin: 20px auto;
-  padding: 15px;
+  padding: 30px;
+  font-style: italic;
 }
 footer {
   margin-top: 30px;
