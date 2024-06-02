@@ -8,6 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merienda:wght@700&family=Moon+Dance&family=Poppins:wght@300&family=Tilt+Prism&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI toast generator</title>
   </head>
@@ -17,9 +19,10 @@
     </header>
 
     <main>
-      <form>
+      <form id="instruction-form">
         <input
           class="text-input"
+          id="textInput"
           type="text"
           placeholder="Enter the topic of a toast"
           autofocus
@@ -29,7 +32,7 @@
         <input class="submit-btn" type="submit" value="Generate" />
         <div class="example">i.e. Love, Freedom, Life</div>
       </form>
-      <div class="ai-answer">The AI answer</div>
+      <div class="ai-answer" id="ai-answer"></div>
     </main>
 
     <footer>
