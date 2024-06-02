@@ -1,7 +1,6 @@
 function displayAnswer(response) {
   //   console.log(response.data.answer);
 
-  //   let aiAnswerField = document.querySelector("#ai-answer");
   new Typewriter("#ai-answer", {
     strings: response.data.answer,
     autoStart: true,
@@ -17,21 +16,19 @@ function search(value) {
     "You are a funny AI assistant. Provide only toast without comments.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  axios.get(apiUrl).then(displayAnswer);
-
-  let aiAnswerField = document.querySelector(".ai-answer");
-  //   aiAnswerField.innerHTML(`⏳ Generating a toast about ${value}`);
+  let aiAnswerField = document.querySelector("#ai-answer");
   aiAnswerField.classList.add("shown");
+  aiAnswerField.innerHTML = `⏳ Generating a toast about ${value}`;
+
+  axios.get(apiUrl).then(displayAnswer);
 }
 
 function handleSubmit(event) {
   event.preventDefault();
+
   let inputElement = document.querySelector("#textInput");
   search(inputElement.value);
 }
 
 let form = document.querySelector("#instruction-form");
 form.addEventListener("submit", handleSubmit);
-
-// let submitButton = document.querySelector(".submit-btn");
-// submitButton.addEventListener("click", handleSubmit);
