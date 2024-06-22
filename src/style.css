@@ -98,6 +98,8 @@ a {
 a:hover {
   color: #402316;
 }
+
+/* media queries - small screen */
 @media (max-width: 600px) {
   body {
     max-width: 90%;
@@ -106,9 +108,13 @@ a:hover {
     font-size: 24px;
   }
   .text-input {
-    width: 40%;
+    width: 45%;
+    padding: 15px 24px;
   }
   .example {
     font-size: 12px;
+  }
+  .submit-btn {
+    padding: 15px 24px;
   }
 }
