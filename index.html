@@ -14,40 +14,44 @@
     <title>AI toast generator</title>
   </head>
   <body>
-    <header>
-      <h1>AI Toast Generator</h1>
-    </header>
+    <div class="container">
+      <header>
+        <h1>AI Toast Generator</h1>
+      </header>
 
-    <main>
-      <form id="instruction-form">
-        <input
-          class="text-input"
-          id="textInput"
-          type="text"
-          placeholder="Enter the topic of a toast"
-          autofocus
-          autocomplete="off"
-          required
-        />
-        <input class="submit-btn" type="submit" value="Generate" />
-        <div class="example">i.e. Love, Freedom, Life</div>
-      </form>
-      <div class="ai-answer" id="ai-answer"></div>
-    </main>
+      <main>
+        <form id="instruction-form">
+          <input
+            class="text-input"
+            id="textInput"
+            type="text"
+            placeholder="Enter a main idea"
+            autofocus
+            autocomplete="off"
+            required
+          />
+          <input class="submit-btn" type="submit" value="Run" />
+          <div class="example">i.e. Love, Freedom, Life</div>
+        </form>
+        <div class="ai-answer" id="ai-answer"></div>
+      </main>
 
-    <footer>
-      This project was created by Nataliia Opanasiuk and is
-      <a
-        href="https://github.com/NataliiaOpanasiuk/AI-toast-generator"
-        target="_blank"
-      >
-        open-sourced on GitHub</a
-      >
-      and
-      <a href="https://ai-toast-generator-on.netlify.app/" target="_blank">
-        hosted on Netlify</a
-      >.
-    </footer>
+      <footer>
+        This project was created by Nataliia Opanasiuk.
+        <br />
+        It is
+        <a
+          href="https://github.com/NataliiaOpanasiuk/AI-toast-generator"
+          target="_blank"
+        >
+          open-sourced on GitHub</a
+        >
+        and
+        <a href="https://ai-toast-generator-on.netlify.app/" target="_blank">
+          hosted on Netlify</a
+        >.
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>

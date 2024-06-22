@@ -13,6 +13,8 @@ h1 {
   line-height: 1.5;
   color: #402316;
 }
+
+/* instruction form */
 form {
   background-color: white;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
@@ -49,19 +51,8 @@ form {
   color: #402316;
   cursor: pointer;
 }
-.generating {
-  animation: blink-animation 1s steps(5, start) infinite;
-}
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
+
+/* ai answer field */
 .ai-answer {
   display: none;
 }
@@ -77,6 +68,22 @@ form {
   line-height: 1.7;
 }
 
+/* blinking */
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* footer */
 footer {
   margin-top: 30px;
   color: #402316;
@@ -90,4 +97,18 @@ a {
 }
 a:hover {
   color: #402316;
+}
+@media (max-width: 600px) {
+  body {
+    max-width: 90%;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .text-input {
+    width: 40%;
+  }
+  .example {
+    font-size: 12px;
+  }
 }
